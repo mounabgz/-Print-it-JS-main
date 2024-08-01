@@ -33,7 +33,7 @@ const arrowRight = document.querySelector(".arrow_right")
 		
 		currentSlide += 1; 
 		
-		if (currentSlide > 4) 
+		if (currentSlide > 3) 
 		currentSlide = 0; 
 
 		bannerImg.src = slides[currentSlide].image;  
@@ -49,10 +49,11 @@ const arrowLeft = document.querySelector(".arrow_left");
 
 	arrowLeft.addEventListener("click", function() {
 
-		if (currentSlide < 0)
-		currentSlide = 4;
-
 		currentSlide -= 1;
+
+		if (currentSlide < 0)
+		currentSlide = 3;
+		
 		bannerImg.src = slides[currentSlide].image;
 		bannerP.innerHTML = slides[currentSlide].tagLine;
 
